@@ -1,0 +1,106 @@
+create table cars(
+car_pid int,
+car_name varchar(30),
+car_count int
+);
+go
+
+INSERT INTO cars(car_pid, car_name, car_count) values(1, 'Innova', 5);
+INSERT INTO cars(car_pid, car_name, car_count) values(2, 'Audi', 10);
+INSERT INTO cars (car_pid, car_name, car_count) values(3, 'BMW', 6);
+INSERT INTO cars(car_pid, car_name, car_count) value(4, 'Ferrari', 12);
+INSERT INTO cars(car_pid, car_name, car_count) value(5, 'Toyota', 8);
+
+DELETE FROM cars WHERE car_pid = 2;
+
+create table carsRent(
+car_pid int,
+car_name varchar(30),
+car_rent int
+);
+go
+
+INSERT INTO carsRent(car_pid, car_name, car_rent) values(1, 'Innova', 1000);
+INSERT INTO carsRent(car_pid, car_name, car_rent) values(2, 'Audi', 2000);
+INSERT INTO carsRent(car_pid, car_name, car_rent) values(3, 'BMW', 1500);
+INSERT INTO carsRent(car_pid, car_name, car_rent) value(4, 'Ferrari', 1800);
+INSERT INTO carsRent(car_pid, car_name, car_rent) values(5, 'Toyota', 2500);
+
+create table carUsers(
+user_pid int,
+user_name varchar(500),
+user_address varchar(500),
+user_contact varchar(500)
+);
+go
+
+ALTER TABLE carUsers
+ADD user_password varchar(500) NOT NULL;
+
+INSERT INTO carUsers(user_pid, user_name, user_address, user_contact, user_password) values(1, 'Karishma Nikhil Pawar', 'Abhilasha CHS, G.D.Ambekar Road, Kalachowki -33','8898378750', '123456');
+
+create table t_booking_car(
+transaction_pid varchar(50),
+user_id varchar(50),
+no_of_day_taken int,
+car_issue_date varchar(10),
+advance_paid int,
+total_charges int,
+balance_amount int
+);
+
+ALTER TABLE cars
+ADD car_rent varchar(20) NOT NULL;
+
+ALTER TABLE cars DROP COLUMN car_rent;
+
+ update cars set car_rent = 6000 where car_pid = 1;
+ update cars set car_rent = 8000 where car_pid = 2;
+ update cars set car_rent = 6000 where car_pid = 3;
+ update cars set car_rent = 2000 where car_pid = 4;
+ 
+ update cars set car_rent = 6000/Day where car_pid = 1;
+ 
+ ALTER TABLE cars
+ ADD date_booked_from varchar(20);
+ 
+ ALTER TABLE cars
+ ADD date_booked_to varchar(20);
+ 
+ ALTER TABLE cars DROP COLUMN 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
